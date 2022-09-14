@@ -4,6 +4,6 @@ from . import views
 
 app_name = "books"
 urlpatterns = [
-    path("", views.LibView.as_view(), name="library"),
-    path("<str:pk>/", views.SelectView.as_view(), name="select"),
+    path("", views.LibListView.as_view(), name="library"),
+    path("<int:pk>/", views.SelectDetailView.as_view(), name="select"),
 ]
